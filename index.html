@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Sistema de Chamados</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Login -->
+  <div id="loginPage">
+    <h2>Login</h2>
+    <input type="text" id="username" placeholder="Usuário">
+    <input type="password" id="password" placeholder="Senha">
+    <button onclick="login()">Entrar</button>
+  </div>
+
+  <!-- Sistema -->
+  <div id="systemPage" style="display:none;">
+    <h2>Registro de Chamados</h2>
+    <form id="chamadoForm">
+      <input type="text" id="cliente" placeholder="Nome do Cliente" required>
+      <input type="text" id="problema" placeholder="Problema" required>
+      <input type="text" id="tecnico" placeholder="Técnico Responsável" required>
+      <textarea id="descricao" placeholder="Descrição do Atendimento"></textarea>
+      <button type="submit">Salvar Chamado</button>
+    </form>
+
+    <h3>Histórico</h3>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Cliente</th>
+          <th>Problema</th>
+          <th>Técnico</th>
+          <th>Descrição</th>
+        </tr>
+      </thead>
+      <tbody id="tabelaChamados"></tbody>
+    </table>
+
+    <button onclick="logout()">Sair</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
